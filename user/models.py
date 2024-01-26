@@ -4,7 +4,7 @@ from django.conf import settings
 from django.utils.timezone import now
 from django.contrib.auth.base_user import BaseUserManager
 import uuid
-
+## fro sjf f,g dfg
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         if not email:
@@ -46,7 +46,7 @@ class CustomUser(AbstractUser):
     news_agency_name = models.CharField(max_length=200, blank=True, null=True)
     user_name = models.CharField(verbose_name="User Name", max_length=200, blank=True, null=True)
     about_me = models.CharField(verbose_name="About Me", max_length=200, blank=True, null=True)
-    profile_picture = models.ImageField(upload_to='Images/profile_img/', verbose_name='Profile Image', null=True, blank=True)
+    profile_picture = models.ImageField(upload_to='Images/profile_img/', verbose_name='Profile_image', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True,null=True, blank=True)
     mobile_phone = models.CharField(verbose_name="Mobile phone", max_length=15, blank=True, null=True)
     content_creator_name = models.CharField(max_length=150, blank=True, null=True)
